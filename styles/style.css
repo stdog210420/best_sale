@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@900&family=M+PLUS+Rounded+1c:wght@200&family=Zen+Maru+Gothic:wght@500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@900&family=Lumanosimo&family=Yuji+Syuku&family=Zen+Kaku+Gothic+New&display=swap');
 #logo_link  {
     padding-top: 10px;
     padding-left: 5px;
@@ -15,8 +14,8 @@
 
 body {
     background-color:#f4bcc6; 
-    font-family: 微軟正黑體, Helvetica, sans-serif;
-    font-size: 22px;
+    font-family: "Yuji Syuku", 微軟正黑體, Helvetica, sans-serif;
+    font-size: 24px;
     margin: 0;
     padding: 0;
 }
@@ -76,7 +75,7 @@ nav a:hover {
 .home-title { 
     margin-top: 10px;
     color: #fff;
-    font-family: 微軟正黑體, "M PLUS Rounded 1c", sans-serif;
+    font-family: "Zen Kaku Gothic New","Zen Kurenaido","Yuji Syuku","Lumanosimo", 微軟正黑體;
     font-size: 2em;
     text-align: center;}
 
