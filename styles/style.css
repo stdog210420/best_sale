@@ -149,6 +149,16 @@ main section {
     padding-top: 10px;
 }
 
+.product-list
+{
+    margin: 200px 0;
+    grid-column: 1/10; 
+}
+
+#productlist
+{
+    display: flex;
+}
 h2{
     margin: 0;
 }

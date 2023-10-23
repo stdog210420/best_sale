@@ -33,9 +33,10 @@
             </section>
         </div>
         <main class="home-grid">
+
             <section class="rivers-card">
                 <img class="card-img" src="images/cabin.jpg" alt="river in forest">
-                <img class="icon" src="images/sling-bag.png" alt="river icon">
+                <img class="icon" src="images/handbag.png" alt="river icon">
                 <h2>Handmade</h2>
             </section>
             <section class="camping-card">
@@ -45,33 +46,60 @@
             </section>
             <section class="rapids-card">
                 <img class="card-img" src="images/temple.jpg" alt="rafting boat">
-                <img class="icon" src="images/watch.png" alt="oars icon">
+                <img class="icon" src="images/wedding.png" alt="oars icon">
                 <h2>Others</h2>
             </section>
             <div id="background"></div> <!--We will be using an empty <div> tag to hold a background color for our message. -->
-            <img class="mountains" src="images/mountains.jpg" alt="Misty mountains">
+            <img class="mountains" src="images/bag2.jpg" alt="Misty mountains">
             <section class="msg">
                 <h2>More Than Just The Thrill</h2>
                 <p>Enjoy the breathtaking scenery. From valleys, meadows, canyons, and high peaks; it's way more than just the rapids. It's a great way to get away from it all and relax amongst all the beauty of the great outdoors. </p>
                 <a class='join' href="rivers.html">Join Us</a>
             </section>
+
+                                    <!-- Product List -->
+            <section class="product-list">
+                <h2>Products</h2>
+                <select id="sortBy" title="Choose a data filter.">
+                    <option value="" disabled selected>Filter Temples</option>
+                    <option value="utah">Utah</option>
+                    <option value="notutah">Outside of Utah</option>
+                    <option value="older">Built Before 1950</option>
+                    <option value="all">No Filter</option>
+                </select>
+                <ul>
+                    <li id="products">
+                    <!-- Product items will be generated here -->
+                    </li>      
+                </ul>
+                <!-- Shopping Cart -->
+                <div id="shopping-cart">
+                    <h2>Shopping Cart</h2>
+                    <ul id="cart">
+                        <!-- Cart items will be generated here -->
+                    </ul>
+                    <button id="checkout">Checkout</button>
+                </div>
+            </section>
+
         </main>
         <footer>
-            <p>Liliean & friends' Store &copy; 2023 </p>
+            <p>Dry Oar &copy; 2023 - Sin Yi Lin</p>
             <p><a href="site-plan-rafting.html">Site Plan</a></p>
             <p><a href="contactus.html">Contact Us</a></p>
             <div class="social">
                 <a href="https://facebook.com" target="_blank">
                     <img src="images/facebook.png" alt="fb icon">
                 </a>
-                <a href="https://twitter.com" target="_blank">
-                    <img src="images/shopee2.png" alt="shopee icon">
+                <a href="https://shopee.com" target="_blank">
+                    <img src="images/shopee.png" alt="twitter icon">
                 </a>
                 <a href="https://instagram.com" target="_blank">
-                    <img src="images/instagram.png" alt="/instagram icon">
+                    <img src="images/pchome.png" alt="instagram icon">
                 </a>
             </div>
         </footer>
     </div>
+    <script type="module" src="scripts/main.js"></script>
 </body>
 </html>
