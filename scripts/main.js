@@ -18,6 +18,12 @@ const displayProducts = (products) =>{
     //Create an HTML <h3> element and add the temple's templeName property to this new element.
     const h3 = document.createElement("h3");   
     h3.textContent = product.productName;
+    // create price element
+    const priceElement = document.createElement('p');
+    priceElement.textContent = `價格: $${product.price}`;
+    // create quantity element
+    const quantityElement = document.createElement('p');
+    quantityElement.textContent = `數量: ${product.quantity}`;
     //Create an HTML <img> element and add the temple's imageUrl property to the src attribute and 
     //the temple's location property to the alt attribute.
     const img = document.createElement("img"); 
@@ -26,6 +32,8 @@ const displayProducts = (products) =>{
     //Append the <h3> element and the <img> element to the <article> element as children. (appendChild)
     article.appendChild(h3);
     article.appendChild(img);
+    article.appendChild(priceElement);
+    article.appendChild(quantityElement);
     //Append the <article> element to the global templesElement variable declared in Step 2
     productElement.appendChild(article);})
 }
@@ -35,7 +43,7 @@ const displayProducts = (products) =>{
     //Create another function expression called getTemples. Make it an async anonymous, arrow function.
 const getProducts = async () => {
     //In the function, declare a const variable named response that awaits the built-in fetch method calling the temple data, absolute URL given in Step 2 above.
-    const response = await fetch("https://byui-cse.github.io/cse121b-ww-course/resources/temples.json"); 
+    const response = await fetch("https://stdog210420.github.io/best_sale/products.json"); 
     //Convert your fetch response into a JavaScript object (.json) and assign the result to the templeList global array variable you declared in Step 3 above. 
     //Make sure the the execution of the code waits here as well until it finishes.
     if (response.ok) {
@@ -83,12 +91,12 @@ const sortBy = (productList) => {
         //"utah": filter for temples where the location contains "Utah" as a string.
         case "utah":
             const handbag =productList.filter((product) => product.class.includes("提袋"));
-            displayProducts(utahTemples);
+            displayProducts(handbag);
             break;
         //"nonutah": filter for temples where the location does not contain "Utah" as a string.
         case "notutah":
             const notHandbag = productList.filter((product) => !product.class.includes("提袋"));
-            displayProducts(notUtahTemples);
+            displayProducts(notHandbag);
             break;
         //"all": no filter. Just use temples as the argument.
         case "all":

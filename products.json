@@ -3,28 +3,28 @@
         "productName": "貝殼花束口小提袋(紫羅蘭)",
         "class":"束口提袋",
         "price": 800,
-        "amount": 5,
-        "imageUrl": "https://github.com/stdog210420/best_sale/blob/e28954d5add6b430c8b47c952c375b2ceb3228de/images/bag1.jpg"
+        "quantity": 5,
+        "imageUrl": "https://stdog210420.github.io/best_sale/images/bag1.jpg"
     },
     {
         "productName": "貝殼花束口小提袋(櫻花粉)",
         "class":"束口提袋",
         "price": 800,
-        "amount": 10,
-        "imageUrl": "https://github.com/stdog210420/best_sale/blob/e28954d5add6b430c8b47c952c375b2ceb3228de/images/bag3.jpg"
+        "quantity": 10,
+        "imageUrl": "https://stdog210420.github.io/best_sale/images/bag3.jpg"
     },
     {
         "productName": "貝殼花手機袋(櫻花粉)",
         "class":"手機袋",
         "price": 800,
-        "amount": 2,
-        "imageUrl": "https://github.com/stdog210420/best_sale/blob/e28954d5add6b430c8b47c952c375b2ceb3228de/images/bag4.jpg"
+        "quantity": 2,
+        "imageUrl": "https://stdog210420.github.io/best_sale/images/bag4.jpg"
     },
     {
         "productName": "貝殼花水壺提袋(天空藍)",
         "class":"水壺提袋",
-        "price": 800,
-        "amount": 1,
-        "imageUrl": "https://github.com/stdog210420/best_sale/blob/e28954d5add6b430c8b47c952c375b2ceb3228de/images/bag5.jpg"
+        "price": 800, 
+        "quantity": 1,
+        "imageUrl": "https://stdog210420.github.io/best_sale/images/bag5.jpg"
         }
 ]
