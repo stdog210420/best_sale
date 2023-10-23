@@ -1,30 +1,30 @@
 [
     {
-        "templeName": "Aba Nigeria",
-        "location": "Aba, Nigeria",
-        "dedicated": "2005, August, 7",
-        "area": 11500,
-        "imageUrl": "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg"
+        "productName": "貝殼花束口小提袋(紫羅蘭)",
+        "class":"束口提袋",
+        "price": 800,
+        "amount": 5,
+        "imageUrl": "https://github.com/stdog210420/best_sale/blob/e28954d5add6b430c8b47c952c375b2ceb3228de/images/bag1.jpg"
     },
     {
-        "templeName": "Cedar City Utah",
-        "location": "Cedar City, Utah, United States",
-        "dedicated": "2017, December, 10",
-        "area": 42657,
-        "imageUrl": "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/cedar-city-utah/400x225/Cedar-City-1978603.jpg"
+        "productName": "貝殼花束口小提袋(櫻花粉)",
+        "class":"束口提袋",
+        "price": 800,
+        "amount": 10,
+        "imageUrl": "https://github.com/stdog210420/best_sale/blob/e28954d5add6b430c8b47c952c375b2ceb3228de/images/bag3.jpg"
     },
     {
-        "templeName": "Manti Utah",
-        "location": "Manti, Utah, United States",
-        "dedicated": "1888, May, 21",
-        "area": 74792,
-        "imageUrl": "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manti-utah/400x250/manti-temple-768192-wallpaper.jpg"
+        "productName": "貝殼花手機袋(櫻花粉)",
+        "class":"手機袋",
+        "price": 800,
+        "amount": 2,
+        "imageUrl": "https://github.com/stdog210420/best_sale/blob/e28954d5add6b430c8b47c952c375b2ceb3228de/images/bag4.jpg"
     },
     {
-        "templeName": "Mexico City Mexico",
-        "location": "Mexico City, Mexico",
-        "dedicated": "1983, December, 2",
-        "area": 116642,
-        "imageUrl": "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
+        "productName": "貝殼花水壺提袋(天空藍)",
+        "class":"水壺提袋",
+        "price": 800,
+        "amount": 1,
+        "imageUrl": "https://github.com/stdog210420/best_sale/blob/e28954d5add6b430c8b47c952c375b2ceb3228de/images/bag5.jpg"
         }
 ]

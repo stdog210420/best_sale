@@ -17,12 +17,12 @@ const displayProducts = (products) =>{
     const article= document.createElement("article");    
     //Create an HTML <h3> element and add the temple's templeName property to this new element.
     const h3 = document.createElement("h3");   
-    h3.textContent = product.templeName;
+    h3.textContent = product.productName;
     //Create an HTML <img> element and add the temple's imageUrl property to the src attribute and 
     //the temple's location property to the alt attribute.
     const img = document.createElement("img"); 
     img.src = product.imageUrl;
-    img.alt = product.location;
+    img.alt = product.class;
     //Append the <h3> element and the <img> element to the <article> element as children. (appendChild)
     article.appendChild(h3);
     article.appendChild(img);
@@ -82,18 +82,13 @@ const sortBy = (productList) => {
     switch (filter) {
         //"utah": filter for temples where the location contains "Utah" as a string.
         case "utah":
-            const utahTemples =productList.filter((product) => product.location.includes("Utah"));
+            const handbag =productList.filter((product) => product.class.includes("提袋"));
             displayProducts(utahTemples);
             break;
         //"nonutah": filter for temples where the location does not contain "Utah" as a string.
         case "notutah":
-            const notUtahTemples = productList.filter((product) => !product.location.includes("Utah"));
+            const notHandbag = productList.filter((product) => !product.class.includes("提袋"));
             displayProducts(notUtahTemples);
-            break;
-        //"older": filter for products where the dedicated date is before 1950. (compare versus new Date(1950, 0, 1)).
-        case "older":
-            const olderProduct = productList.filter((product) => new Date(product.dedicated) < new Date(1950, 0, 1));
-            displayProducts(olderProduct);
             break;
         //"all": no filter. Just use temples as the argument.
         case "all":
