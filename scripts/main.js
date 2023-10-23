@@ -34,7 +34,10 @@ const displayProducts = (products) =>{
     button.textContent = "加入購物車";
     // Trigger the addToCart function with the respective product as a parameter in the button's click event listener
     button.addEventListener("click", function() {
-        addToCart(product);
+        console.log("Button clicked with productId: " + product.productId);
+        console.log("Button clicked with productQuantity: " + product.quantity);
+        product.quantity = 0;
+        addToCart(product.productId);
     });
     //Append the <h3> element and the <img> element to the <article> element as children. (appendChild)
     article.appendChild(h3);
@@ -124,28 +127,58 @@ const sortBy = (productList) => {
 // Add shopping cart button functionality
 const addToCartButton = document.getElementById("addToCart");
 const cartItems = document.getElementById("cart-items");
+const totalQuantity = document.getElementById("quantity");
 const totalCost = document.getElementById("total");
 let cart = [];
 let totalPrice = 0;
+let sum = 0;
 //click button function
 function addToCart(productId) {
     const product = productList.find((item) => item.productId === productId);
-    // add product to shopping cart
-    cart.push(product);
+    console.log(product)
 
-    // Check if the product has a 'quantity' property, if not, initialize it to 1
-    if (typeof product.quantity === 'undefined') {
-        product.quantity = 1;
+    if (product) {
+        // If the product is found, add it to the cart
+        cart.push(product);
+        // Update the quantity of the added product
+        product.quantity++;
+
+        // Create a new list element
+        const listItem = document.createElement("li");
+        listItem.textContent = `商品編號: ${product.productId}, 商品名稱: ${product.productName}, 價格: $${product.price}, 數量: ${product.quantity}`;
+        // add listItem to the shopping cart
+        cartItems.appendChild(listItem);
+
+        //update total number
+        sum += product.quantity;
+        console.log(totalQuantity)
+        console.log(product.quantity)
+        // update total price
+        totalPrice += product.price * product.quantity;
+        totalQuantity.textContent = `合計: ${sum}`;
+        totalCost.textContent = `總金額: $${totalPrice}`;
     } else {
-    // If 'quantity' property exists, increment it
-    product.quantity++;
+        // Handle the case where the product is not found
+        console.log("Product not found.");
     }
-  // Create a new list element
-const listItem = document.createElement("li");
-listItem.textContent = `商品編號： ${product.productId}, 商品名稱: ${product.name}, 價格: $${product.price}, 數量: ${totalQuantity}`;
-  // add listItem to shopping cart
-cartItems.appendChild(listItem);
+}
+// Get a reference to the "Clear" button element
+const clearCartButton = document.getElementById("clearCart");
 
-  // update total price
-totalPrice += product.price * product.quantity;
-totalCost.textContent = `總金額: $${totalPrice}`;}
+// Add a click event listener to the "Clear" button
+clearCartButton.addEventListener("click", () => {
+    // Clear the shopping cart
+    cart = [];
+    sum = 0;
+    totalPrice = 0;
+
+    // Remove all items from the cart display
+    cartItems.innerHTML = ""; // Assuming "cartItems" is the container for cart items
+
+    // Update the total cost and total quantity displays
+    totalCost.textContent = "總金額: $0";
+    totalQuantity.textContent = "合計: 0"; // Make sure to use the correct element
+
+    // You can also add additional logic as needed, like showing a message or resetting other parts of your application.
+});
+
