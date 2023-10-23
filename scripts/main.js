@@ -32,6 +32,10 @@ const displayProducts = (products) =>{
     //Create button for each product
     const button = document.createElement("button");
     button.textContent = "加入購物車";
+    // Trigger the addToCart function with the respective product as a parameter in the button's click event listener
+    button.addEventListener("click", function() {
+        addToCart(product);
+    });
     //Append the <h3> element and the <img> element to the <article> element as children. (appendChild)
     article.appendChild(h3);
     article.appendChild(img);
@@ -129,12 +133,16 @@ function addToCart(productId) {
     // add product to shopping cart
     cart.push(product);
 
-    // update quantity
+    // Check if the product has a 'quantity' property, if not, initialize it to 1
+    if (typeof product.quantity === 'undefined') {
+        product.quantity = 1;
+    } else {
+    // If 'quantity' property exists, increment it
     product.quantity++;
-
+    }
   // Create a new list element
 const listItem = document.createElement("li");
-listItem.textContent = `商品編號： ${product.productId}, 商品名稱: ${product.name}, 價格: $${product.price}, 數量: ${product.quantity}`;
+listItem.textContent = `商品編號： ${product.productId}, 商品名稱: ${product.name}, 價格: $${product.price}, 數量: ${totalQuantity}`;
   // add listItem to shopping cart
 cartItems.appendChild(listItem);
 
